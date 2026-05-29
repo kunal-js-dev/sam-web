@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import { AuthProvider } from "@/lib/auth-context";
 import { CartProvider } from "@/lib/cart-context";
 import { LanguageProvider, useLanguage } from "@/lib/language-context";
+import { WelcomeModal } from "@/components/site/WelcomeModal";
 
 function NotFoundComponent() {
   return (
@@ -134,6 +135,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <CartProvider>
+          <WelcomeModal />
           <Outlet />
         </CartProvider>
       </AuthProvider>
